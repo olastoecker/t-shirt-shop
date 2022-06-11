@@ -8,8 +8,6 @@ const Products = () => {
   return (
     <section>
       {products.map(product => <Product key={product.id} id={product.id}  name={product.name}  title={product.title} colors={product.colors} sizes={product.sizes} basePrice={product.basePrice} />)}
-      {/* <Product {...products[0]}/>
-      <Product {...products[0]}/> */}
     </section>
   );
 };
