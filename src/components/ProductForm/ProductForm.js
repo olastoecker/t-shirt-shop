@@ -1,8 +1,8 @@
 import styles from './ProductForm.module.scss';
 import PropTypes from 'prop-types';
-import Button from './Button/Button.js';
-import OptionColor from './OptionColor/OptionColor';
-import OptionSize from './OptionSize/OptionSize';
+import Button from '../Button/Button.js';
+import OptionColor from '../OptionColor/OptionColor';
+import OptionSize from '../OptionSize/OptionSize';
 
 
 const ProductForm = ({handleSubmit, currentSize, currentColor, sizes, colors, setCurrentSize, setCurrentColor}) => {

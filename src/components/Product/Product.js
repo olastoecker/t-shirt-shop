@@ -1,8 +1,8 @@
 import styles from './Product.module.scss';
 import PropTypes from 'prop-types';
 import { useState, useMemo } from 'react';
-import ProductImage from './ProductImage/ProductImage';
-import ProductForm from './ProductForm/ProductForm';
+import ProductImage from '../ProductImage/ProductImage';
+import ProductForm from '../ProductForm/ProductForm';
 
   const Product = ({ title, basePrice, colors, sizes, name }) => {
 
@@ -35,12 +35,11 @@ import ProductForm from './ProductForm/ProductForm';
             </header>
               <ProductForm
                 handleSubmit={handleSubmit}
-                price={getPrice} 
                 colors={colors} 
-                sizes={sizes} 
                 currentColor={currentColor} 
-                currentSize={currentSize} 
                 setCurrentColor={setCurrentColor} 
+                sizes={sizes} 
+                currentSize={currentSize} 
                 setCurrentSize={setCurrentSize} />
           </div>
         </article>
@@ -54,7 +53,6 @@ import ProductForm from './ProductForm/ProductForm';
       name: PropTypes.string.isRequired,
       sizes: PropTypes.array.isRequired,
       title: PropTypes.string.isRequired,
-      getPrice: PropTypes.func
     };
     
 export default Product;
